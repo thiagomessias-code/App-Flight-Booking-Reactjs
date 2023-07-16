@@ -1,5 +1,8 @@
-import React from "react";
+
 import { Container } from "./styles";
+
+import video from '../../assets/video/video.mp4'
+import aeroplane from '../../assets/img/aerplane.png'
 
 export default function Home() {
   return (
@@ -9,9 +12,9 @@ export default function Home() {
       </div>
       <div className="homeImages flex">
         <div className="videoDiv">
-          <video src="" className="video"></video>
+          <video src={video} autoPlay muted loop className="video"></video>
         </div>
-        <img src="" alt="img" className="plane" />
+        <img src={aeroplane} alt="img" className="plane" />
       </div>
     </Container>
   );
