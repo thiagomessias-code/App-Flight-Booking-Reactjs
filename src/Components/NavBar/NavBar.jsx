@@ -12,6 +12,17 @@ export default function NavBar() {
     setAtive("navBarMenu showNavBar");
   };
 
+  const [noBg, addBg] = useState("navBarTwo");
+  const addBgColor = () => {
+    if(window.scrollY >= 10){
+      addBg("navBarTwo navBar_With_Bg");
+    }else{
+      addBg('navBarTwo')
+    }
+  };
+  window.addEventListener('scroll', addBgColor)
+  
+
   const removeNavBar = () => {
     setAtive("navBarMenu");
   };
@@ -38,7 +49,7 @@ export default function NavBar() {
           <span>Sign Out</span>
         </div>
       </div>
-      <div className="flex navBarTwo">
+      <div className={noBg}>
         <div className="logoDiv">
           <img src={logo} alt="Logo" className="Logo" />
         </div>

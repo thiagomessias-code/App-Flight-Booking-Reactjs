@@ -33,6 +33,38 @@ export const Container = styled.div`
         width: 100%;
         justify-content: center;
         flex-direction: column;
+        .singleInput{
+            .iconsDiv{
+                padding: 16px 10px;
+                border-radius: 1rem;
+                background: var(--SecondaryColor);
+                margin-right: 1rem;
+                .icon{
+                    color: var(--blackColor);
+                    opacity: .7;
+                }
+            }
+            .texts{
+                h4{
+                    padding-top: 0;
+                    padding-bottom: .7rem;
+                    color: var(--blackColor);
+                    font-weight: 700;
+                }
+                input{
+                    width: 95%;
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    cursor: pointer;
+
+                    &::placeholder{
+                        font-size: 12px;
+                        opacity: .5;
+                    }
+                }
+            }
+        }
     }
 }
 `;
